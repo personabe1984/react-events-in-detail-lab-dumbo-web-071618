@@ -5,9 +5,8 @@ class DelayedButton extends Component{
   handleOnClick = (event) => {
     // this.props.onDelayedClick(setTimeout(this.props.delay))
     event.persist();
-    setTimeout(() => {
-      this.props.onDelayedClick(event)
-    }, this.props.delay)
+    setTimeout(() => 
+      this.props.onDelayedClick(event), this.props.delay)
   }
 
   render() {
